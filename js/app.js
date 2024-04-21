@@ -1,22 +1,3 @@
-/**
- * 
- * Manipulating the DOM exercise.
- * Exercise programmatically builds navigation,
- * scrolls to anchors from navigation,
- * and highlights section in viewport upon scrolling.
- * 
- * Dependencies: None
- * 
- * JS Version: ES2015/ES6
- * 
- * JS Standard: ESlint
- * 
-*/
-
-/*
- * Begin Main Functions
- * 
-*/
 
 // build the nav
 function build_nav() {
@@ -60,10 +41,8 @@ build_nav();
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-
         document.querySelector(this.getAttribute('href')).scrollIntoView({
-            block: 'center',
-            inline: 'center',
+            block: 'start',
             behavior: 'smooth'
         });
     });
